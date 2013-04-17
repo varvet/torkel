@@ -1,0 +1,16 @@
+---
+web:
+  context: "/"
+topics:
+  "/topics/thing":
+ruby:
+  version: '1.9'
+  interactive: true
+stomp:
+  stomplets:
+    foo.stomplet:
+      route: "/bridge/foo"
+      class: BridgeStomplet
+      config:
+        type: topic
+        destination: "/topics/thing"
