@@ -23,4 +23,6 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'selenium-webdriver'
+  gem 'capistrano'
+  gem 'torquebox-capistrano-support'
 end

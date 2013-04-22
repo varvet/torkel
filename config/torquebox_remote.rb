@@ -5,4 +5,5 @@ TorqueBox::RemoteDeploy.configure do
   #user "torquebox"
   user "ubuntu"
   key "~/.ec2/elabs.pem"
+  rails_env "production"
 end
