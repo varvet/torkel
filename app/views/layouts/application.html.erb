@@ -4,8 +4,7 @@
   <title>Torkel</title>
   <script src="/stilts-stomp.js"></script>
   <script>
-    window.Client = Stomp.client(<%= raw fetch('stomp-endpoint').to_json %>);
-    Client.connect("x", "y", function() {});
+    window.STOMP_HOST = "ws://" + window.location.hostname + ":" + <%= raw URI.parse(fetch('stomp-endpoint')).port.to_json %> + "/";
   </script>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
