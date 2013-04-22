@@ -1,9 +1,10 @@
 development: &default
+  host: 127.0.0.1
   adapter: postgresql
   encoding: unicode
   database: torkel_development
   username: elabs
-  password:
+  password: elabs
 
 test:
   <<: *default

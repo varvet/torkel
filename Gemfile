@@ -8,6 +8,7 @@ gem 'torquebox'
 gem 'torquebox-server'
 gem 'torquebox-console'
 gem 'pry-rails'
+gem 'rake'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -17,6 +18,7 @@ group :assets do
 end
 
 group :test, :development do
+  gem 'torquebox-remote-deployer'
   gem 'torquespec'
   gem 'rspec-rails'
   gem 'capybara'

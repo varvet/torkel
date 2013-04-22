@@ -58,7 +58,6 @@ GEM
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
-    ffi (1.7.0)
     ffi (1.7.0-java)
     hike (1.2.2)
     i18n (0.6.1)
@@ -69,7 +68,6 @@ GEM
       thor (>= 0.14, < 2.0)
     jruby-openssl (0.8.7)
       bouncy-castle-java (>= 1.5.0147)
-    json (1.7.7)
     json (1.7.7-java)
     mail (2.5.3)
       i18n (>= 0.4.0)
@@ -78,15 +76,13 @@ GEM
     method_source (0.8.1)
     mime-types (1.22)
     multi_json (1.7.2)
-    nokogiri (1.5.9)
+    net-scp (1.1.0)
+      net-ssh (>= 2.6.5)
+    net-ssh (2.6.7)
     nokogiri (1.5.9-java)
     parslet (1.4.0)
       blankslate (~> 2.0)
     polyglot (0.3.3)
-    pry (0.9.12)
-      coderay (~> 1.0.5)
-      method_source (~> 0.8)
-      slop (~> 3.4)
     pry (0.9.12-java)
       coderay (~> 1.0.5)
       method_source (~> 0.8)
@@ -184,6 +180,12 @@ GEM
     torquebox-naming (2.3.0-java)
     torquebox-rake-support (2.3.0)
       rake (>= 0.8.7)
+    torquebox-remote-deployer (0.1.1)
+      jruby-openssl
+      net-scp
+      net-ssh
+      rake
+      torquebox-rake-support
     torquebox-security (2.3.0-java)
       torquebox-core (= 2.3.0)
     torquebox-server (2.3.0-java)
@@ -219,12 +221,14 @@ DEPENDENCIES
   jruby-openssl
   pry-rails
   rails (= 3.2.13)
+  rake
   rspec-rails
   sass-rails (~> 3.2.3)
   selenium-webdriver
   therubyrhino
   torquebox
   torquebox-console
+  torquebox-remote-deployer
   torquebox-server
   torquespec
   uglifier (>= 1.0.3)
